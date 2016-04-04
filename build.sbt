@@ -8,8 +8,8 @@ scalaVersion := "2.11.8"
 
 // "-Ydebug"
 scalacOptions := Seq(
-  "-Xfatal-warnings", "-deprecation", "-feature", "-unchecked", "-explain-types",
-  "-uniqid", -Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8"
+  "-Xfatal-warnings", "-deprecation", "-feature", "-unchecked", "-explain-types", "-uniqid",
+  "-Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8"
 )
 
 val scalazVersion = "7.1.0"
