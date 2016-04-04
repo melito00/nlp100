@@ -8,7 +8,7 @@ scalaVersion := "2.11.8"
 
 // "-Ydebug"
 scalacOptions := Seq(
-  "-Xfatal-warnings", "-deprecation", "-feature", "-unchecked", "-explain-types", "-uniqid",
+  "-Xfatal-warnings", "-deprecation", "-feature", "-unchecked", "-explaintypes", "-uniqid",
   "-Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8"
 )
 
