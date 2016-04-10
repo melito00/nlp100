@@ -1,11 +1,13 @@
-package mobi.jnkymd.nlp100
+import mobi.jnkymd.nlp100._
 
 import org.scalatest.FunSpec
 
-class HelloWorldSpec extends FunSpec {
-  describe("Adding 1 to 1") {
-    it("should equals 2"){
-      assert(1+1 == 2)
+class P00Spec extends FunSpec {
+  describe("ch.00") {
+    describe("reverse 'stressed") {
+      it("should equals 'desserts") {
+        assert(p00.ReverseString("stressed") == "desserts")
+      }
     }
   }
 }
