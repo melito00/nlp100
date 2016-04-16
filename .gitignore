@@ -1,6 +1,8 @@
 *.class
 *.log
 
+file.txt
+
 dist/*
 target/
 boot/
