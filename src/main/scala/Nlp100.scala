@@ -22,8 +22,8 @@ object p00 {
   def MergeString(s1: String, s2: String): String = {
     def mergeList[A](l1: List[A], l2: List[A]): List[A] = {
       (l1, l2) match {
-        case (Nil, _) => l2
         case (_ , Nil) => l1
+        case (Nil, _) => l2
         case (x::xRest, y::yRest) => x::y::mergeList(xRest, yRest)
       }
     }
@@ -32,6 +32,23 @@ object p00 {
   def CountChars(s: String): List[Int] = {
     // "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
     s.split(" ").map(s => s.collect { case x: Char if x.isLetter => x}.length).toList
+  }
+  def p04(): Unit = {
+    val s = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
+    val indexies = Array(1, 5, 6, 7, 8, 9, 15, 16, 19)
+
+    println(s.split(" ").zipWithIndex.collect {
+      case (s, i) if indexies.exists(_ == i + 1) => (s.charAt(0), i +1)
+      case (s, i) => (s.substring(0, 2), i + 1)
+    }.toMap)
+  }
+  def NGram(stream: String): List[String] = {
+    stream.split(" ").toList
+
+  }
+
+  def NGram(stream: List[String]): List[String] = {
+    stream
   }
 }
 
@@ -48,5 +65,6 @@ object Nlp100 {
     }
     println(p00.ReverseString("stressed"))
     println(p00.CountChars("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."))
+    p00.p04()
   }
 }
